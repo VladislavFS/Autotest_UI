@@ -28,4 +28,4 @@ jobs:
       - name: install Chrome
         run: sudo apt-get install google-chrome-stable
       - name: run tests
-        run: python -m pytest -n4 [...]
+        run: python -m pytest -n4 [...] --alluredir=allure-result
