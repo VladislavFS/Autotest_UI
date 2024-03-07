@@ -2,6 +2,7 @@
 logs/
 .idea/
 tests/utilities/generator_pom
+allure-result/
 
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm
