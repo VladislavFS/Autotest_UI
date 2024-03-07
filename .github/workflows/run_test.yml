@@ -35,12 +35,12 @@ jobs:
       - name: run tests
         run: python -m pytest -n4 [...] --alluredir=allure-result
 
-      - name: Store allure results
+      - name: Store allure result
         uses: actions/upload-artifact@v3
         with:
-            name: allure-results
+            name: allure-result
             path:
-              allure-results
+              allure-result
             retention-days: 1
 
   generate-report:
@@ -62,7 +62,7 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
 
-    - run: allure generate -c allure-results -o _site
+    - run: allure generate -c allure-result -o _site
 
     - name: Store generated report
       uses: actions/upload-artifact@v3
