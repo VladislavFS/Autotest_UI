@@ -95,7 +95,7 @@ jobs:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v3
 
-      - run: mkdir allure-result && unzip old_allure-results.zip -d allure-result
+      - run: mkdir allure-result && cp old_allure-results/* allure-result
 
       - name: run tests
         run: python -m pytest -n4 [...] --alluredir=allure-result
