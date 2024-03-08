@@ -7,7 +7,7 @@ def test_select_page_single(browser):
     sp = SelectPage(browser)
     sp.open_select_page()
     language = random_programming_language()
-    sp.send_keys(sp.choose_language_selects(), language)
+    sp.select_by_visible_text(sp.choose_language_selects(), language)
     sp.submit_button_click()
     assert sp.result_string().text == language
 
