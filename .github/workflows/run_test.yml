@@ -107,7 +107,7 @@ jobs:
             name: allure-result
             path:
               allure-result
-            retention-days: 1
+            retention-days: 30
 
   generate-report:
     runs-on: ubuntu-latest
