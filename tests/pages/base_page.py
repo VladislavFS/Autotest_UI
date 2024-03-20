@@ -30,3 +30,8 @@ class BasePage:
     def focus_new_tab(self):
         window = self.browser.window_handles
         self.browser.switch_to.window(window[-1])
+
+    def open_link(self, elem):
+        link = elem
+        self.browser.get(link.get_attribute("href"))
+
